@@ -28,10 +28,18 @@ search: true
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
-permalink: /:categories/:title/
+permalink: /:year/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Australia/Melbourne
+
+sass:
+    sass_dir: _sass
+
+kramdown:
+    syntax_highlighter_opts:
+        block:
+            line_numbers: true
 
 include:
   - _pages
@@ -58,31 +66,52 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Adib Surani"
-  avatar : "/assets/images/adib.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Muhammad Adib Surani"
+  avatar : "/assets/images/adib420.jpg"
+  bio    : "Hello world, I'm Adib aka @Neobeo. Mathematician, puzzle hunter, and cryptography enthusiast. And father to a daughter with Rett Syndrome."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/adib.surani/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:me@adib.au"
+    - label: "Discord"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.com/users/260642125551632384"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/AdibSurani"
+    - label: "GitHub (alt)"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Neobeo"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/adibsurani/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://www.facebook.com/adib.surani/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/a_d.i_b/"
 
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:me@adib.au"
+    - label: "Discord"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.com/users/260642125551632384"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/AdibSurani"
+    - label: "GitHub (alt)"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Neobeo"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/adibsurani/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       url: "https://www.facebook.com/adib.surani/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/a_d.i_b/"
@@ -94,6 +123,7 @@ defaults:
       type: posts
     values:
       layout: single
+      show_date: true
       author_profile: true
       read_time: true
       comments: true
