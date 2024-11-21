@@ -3,6 +3,8 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+My full name is Muhammad Adib bin Surani, but [Malay names](https://en.wikipedia.org/wiki/Malaysian_names) can get very confusing so I often present myself as Adib Surani. I've been married for fourteen years, with three wonderful kids, the youngest of whom, Maria, has [Rett syndrome](https://en.wikipedia.org/wiki/Rett_syndrome). She's actually my inspiration for starting this website.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+I am a mathematician, puzzle hunter, and CTF player. In the puzzle world I'm usually just Adib, but in the hacking scene (be it CTF or game translation), I typically go by the pseudonym Neobeo. This separation was made back when I was younger and anonymity seemed like an important thing. But nowadays it's just a hassle to have e.g. two github accounts.
+
+[@todo: rest of the About page]
