@@ -17,8 +17,7 @@ title: All Data Is Beautiful
 email: me@adib.au
 description: >- # this means to ignore newlines until "baseurl:"
   Another Dull Internet Blog, filled with random ramblings of
-  mathematics, puzzles, and cryptography. But also with things
-  related to Rett Syndrome probably; we'll see how it plays out.
+  mathematics, puzzles, cryptography, and Rett Syndrome.
 twitter_username: username
 github_username: AdibSurani
 minimal_mistakes_skin: default
@@ -80,7 +79,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/AdibSurani"
     - label: "GitHub (alt)"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-fw fa-github-alt"
       url: "https://github.com/Neobeo"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
@@ -104,7 +103,7 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/AdibSurani"
     - label: "GitHub (alt)"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-fw fa-github-alt"
       url: "https://github.com/Neobeo"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
