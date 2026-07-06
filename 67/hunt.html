@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6-7 Puzzle Hunt</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////AK2trQBlqWwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAgAAABERIRESMzMAEREhERIzMwARESEREjMzABERIRESMzMCIiIiIiIiIiARESEREjMzABERIRESMzMAEREhERIzMwARESEREjMzAiIiIiIiIiIgEREjMzIzMwARESMzMjMzABERIzMyMzMAEREjMzIzMwAAACAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.8.1/cerulean/bulmaswatch.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      #puzzle-list a.is-active { background-color: rgb(0, 0, 0, 0.1); }
+      #puzzle-list a:focus { background-color: rgb(0, 0, 0, 0); }
+      .puzzle-navbar h1 { background-color: rgb(0, 0, 0, 0); font-weight: 600; }
+      /* The secret art mixes ASCII letters with heavy box-drawing glyphs, which
+         many system monospace fonts (especially on mobile) lack — they fall back
+         to a proportional font and the alignment breaks. JetBrains Mono ships the
+         heavy box glyphs at a uniform width, so pull it from a CDN for the secret. */
+      @font-face {
+        font-family: "JetBrains Mono";
+        src: url(https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@v2.304/fonts/webfonts/JetBrainsMono-Regular.woff2) format("woff2");
+        font-display: swap;
+      }
+      #seven { line-height: 1.2; overflow-x: auto; font-family: "JetBrains Mono", monospace; }
+      .sidebar .message-header .buttons { width: 100%; }
+      #check-btn { flex: 1; }
+      #seven:empty { display: none; }
+      .app-shell { height: 100vh; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+      .workspace { min-height: 0; display: flex; }
+      .board-area { flex: none; height: 100%; aspect-ratio: 1 / 1; max-width: 600px; }
+      .sidebar { flex: none; width: 360px; min-height: 0; padding: 1rem; border-left: 1px solid #e5e5e5; overflow-y: auto; }
+      .navbar-item { display: flex; align-items: center; gap: 0.45rem; }
+      .puzzle-state { color: #cccccc; }
+      .navbar-item.done .puzzle-state { color: #48c774; }
+      .board-stack { width: 100%; height: 100%; position: relative; display: grid; place-items: start; }
+      .puzzle-board { position: absolute; inset: 0; display: grid; place-items: start; visibility: hidden; pointer-events: none; }
+      .puzzle-board.active { visibility: visible; pointer-events: auto; }
+      .puzzle-board > div, .puzzle-board > canvas, .puzzle-board > svg { width: min(100%, 600px); height: min(100%, 600px); max-width: 600px; max-height: 600px; }
+
+      /* Mobile: stack the puzzle above the controls and let the page scroll */
+      @media screen and (max-width: 1023px) {
+        .app-shell { display: block; height: auto; }
+        .workspace { display: block; }
+        .board-area { aspect-ratio: auto; max-width: none; width: 100%; height: min(100vw, 600px); padding: 0.5rem; }
+        .sidebar { width: auto; max-width: 600px; border-left: none; border-top: 1px solid #e5e5e5; overflow-y: visible; }
+        /* The theme only recolors the open menu blue below 768px; extend it across
+           the whole burger range so menu items match the blue header (instead of
+           white text on a white menu). */
+        .puzzle-navbar .navbar-menu {
+          background-color: #2fa4e7;
+          background-image: linear-gradient(180deg, #54b4eb 0%, #2fa4e7 60%, #1d9ce5 100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app-shell">
+      <nav class="navbar puzzle-navbar" role="navigation" aria-label="Puzzle navigation">
+        <div class="navbar-brand">
+          <h1 class="navbar-item">6-7 Puzzle Hunt</h1>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" tabindex="0" data-target="puzzle-list">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="puzzle-list" class="navbar-menu">
+          <div class="navbar-start puzzle-nav">
+            <a class="navbar-item is-active" data-puzzle="tapa" data-src="tapa/10/10/q6h6g7g7o7j6m6j6l7j6r7j7j7g7j7q" data-ct="QQ5rSlQJOalQ0Vu3BtRJFMZQVoi13dOeMmIqSrukvkFwKfVtRxHIfJHWKK92x7FTXYNKbTaRrGPSy60IM3NpnMGGbWfLP0oMvscrJ431CdnhWcXOK9pRpd6skF1ICZHUBYgQj4nSzdxz0Fd12I53xTejfAl0kKKIsJVfq9lca1S+o3LX9rhntUYax8C9rWR1QjGCj1ePVnRZSfUtEimhnn+DECPELG1216pfukWxefKrVNMVdcKprCOYFj6rf3n6C9Lgp1ZI7ZTkltouv+DB9ZaZmUsXtQ8YeS5jKCn9VChBGGuINDc/V7CVKXaVrkCLryRRDw1efUh6845NNao9"></a>
+            <a class="navbar-item" data-puzzle="nurikabe" data-src="nurikabe/10/10/zp6s7x7k6g6j6n7t" data-ct="6JsIhz7FUpJ2J/g6KS9Vu6T7fKuI9YoR2XdWpRLSTqNro/ZuTEfzS2iTdeJogK8I78Ft+0tVpauEXxVSjc+VlHr9dvptjuhiYqAB+YOECGit38Q7dosXP3FZEZy71lGMVCdLnsK8lPx3+uJkkOOAz1zuyGqIT0OtQTko70l8177uZ5M1NXi3jfskMFfoiCOJ9kw6fgb8KQXDmxckuoPwDzGrnFcbaNkzkDIEL1pYe1+i+toDMGenrfX7xoKtzARNKwqD8PQ5jsXfByZImvEXOTVF7jfVChHU4ueUaPNTXn0GxfD6XooeRNP945GEf7mp4nN3dLT6ySZhntpY"></a>
+            <a class="navbar-item" data-puzzle="fillomino" data-maxnum="9" data-src="fillomino/10/10/l6h76g76g76i7i6k6o77n77g7i6k6g667h76g766h776g7h7g7h6g6i7g7g" data-ct="wkGMSzg2ZS3Bsl8qjO8sgtt+yS60LrlajV9OrjMMS+oQAAZuvg+MX2L+txJU4HAT4Kkdsxtlm+qAD39ja+K76XWNP5+p0y67BSlma3XKXgR4uQtZrsPI75G2qDrMd0UqhrlbA3l18I6wRKis28rCtpk1wesX02dD7BFvFZuhkNvQMf2ZZ2P31E6L1Hnqd45oIzle54zA1qu6uQPh5aj6rpkbIPEaFFq9QDpSfVgqDp9nkd2+cvwUr18UfuLGYghKUzPz42qwgvC/CgpXqpaXcC/q/A=="></a>
+            <a class="navbar-item" data-puzzle="shikaku" data-src="shikaku/10/10/g6j7r6j6y7l66h7m7k6g6i6g66r6m6" data-ct="6fJcaKjSapLAFYjBLkAuOpP7HTxtpUmPuPFSNzlduau5eHsAG6m884rz3toOJE4v8jNOFa+/PJrbprm/dt/Kgd29K2vxtQFM3EIRG5/c0TnUVrLBRvSXqyKn/WriYGNtrg7m3TepJmYdCzkPFrYDk2tSehpZJaOYk88ugCEWVzjfVD7ZB+5G0VssE5LlNsagMhZIEyKPQKUVHTKSFmwALjIf7R20A6TXIWoBFodB/Jt5HIyM8UE/HPGQY7CPPqAOs7JR+xMlvvs8ndWXBXQKRJvEnTpYVntIZmvldd0P3nMiSwQOiwnKL5UCPCxGbYwtteVKTyAQdzkYR7WbYpHnJvAbY7WX8BAcYdPQYw=="></a>
+            <a class="navbar-item" data-puzzle="skyscrapers" data-src="skyscrapers/8/8/6g66n77j77n66g6" data-ct="+SWBsGLg+K9nNGX29aGJgvPWeq6cTE5Ft5cQ58UihOc6Ie0qVb8n0lNZ4i4QV79KIY3w8yqztQoNe2ExGPHBe4uEwJfUhu3TSR4NjZzekj+9bEA6k6xJpcYw2MRtL4pSS2u3FSA+RBO3n1OnSOBNpdr18oRPQgMydjzOP8o7L/nKq+fkOiEQCogdVQTNAzKTtzrjqw+3djiC/dYR2P/ZU94P+4P7q2zY9i5F9WKsxrJPgtWn3eR5RVs34MpTqiqpPO9XGfCrjybi1LR6+z7z87NrPjzSCiYP"></a>
+            <a class="navbar-item" data-puzzle="kakuro" data-src="kakuro/9/9/..-6m.....77m6-..6-77l-6l7-6-m..-7o7-...76o7-.66m.-7l67l....-6m.....-7m...667667" data-ct="0fufz0S+MoX9WOpd6KZ004hIeWTRz6ccy/wSiOj/LOICIaMIz8H1XBX0kcx6iKkx6Plm1/kKNz9hzgT7SBpp2qEGcvccXvAv9etpDc0jfcQurCnNkg9pYyS7pej9ahxWaCl1wVrkVMqWJjWRrHhli8MNU90y/bH0C2AR5EqLBJcg/napUp9J8CfVPpEFJ5UeodKehJj/m5kpDTEKsfl9YOczxAJ08hSYPzEjG0VV3QGv8N8g0wWXmKV3xkNG5lR3eEgCFymvvZDbTDqp2yU2TePP7gGyH3NMlFOL"></a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="workspace">
+        <section class="board-area">
+          <div id="board-stack" class="board-stack"></div>
+        </section>
+
+        <aside class="sidebar">
+          <article class="message is-info">
+            <div class="message-header">
+              <div class="buttons">
+                <button id="check-btn" class="button is-primary">Check</button>
+                <button id="undo-btn" class="button" title="Undo" aria-label="Undo"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i></button>
+                <button id="redo-btn" class="button" title="Redo" aria-label="Redo"><i class="fa-solid fa-rotate-right" aria-hidden="true"></i></button>
+                <button id="clear-btn" class="button" title="Erase answer" aria-label="Erase answer"><i class="fa-solid fa-eraser" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div class="message-body"><p id="six"></p></div>
+          </article>
+          <pre id="seven"></pre>
+        </aside>
+      </div>
+    </main>
+
+    <script src="https://puzz.link/js/pzpr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.8/sjcl.min.js"></script>
+    <script>
+const puzzles = {};
+let currentPuzzle = null;
+
+const dom = {
+  puzzleList: document.getElementById("puzzle-list"),
+  boardStack: document.getElementById("board-stack"),
+  checkBtn: document.getElementById("check-btn"),
+  undoBtn: document.getElementById("undo-btn"),
+  redoBtn: document.getElementById("redo-btn"),
+  clearBtn: document.getElementById("clear-btn"),
+  six: document.getElementById("six"),
+  seven: document.getElementById("seven"),
+};
+
+const STORAGE_KEY = "sixseven-state-v1";
+
+function readSavedState() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+  } catch {
+    return {};
+  }
+}
+
+const savedState = readSavedState();
+
+function persistState() {
+  // Don't overwrite saved progress before the boards exist (e.g. if pzpr fails to load).
+  if (!Object.keys(puzzles).length) {
+    return;
+  }
+  const state = {active: currentPuzzle?.id || null, puzzles: {}};
+  for (const id in puzzles) {
+    const puzzle = puzzles[id];
+    if (!puzzle.ready) {
+      continue;
+    }
+    state.puzzles[id] = {
+      src: puzzle.srcRef,
+      data: puzzle.getFileData(pzpr.parser.FILE_PZPRV3),
+      six: puzzle.six,
+      seven: puzzle.seven,
+      done: !!puzzle.done,
+    };
+  }
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch {}
+}
+
+let saveTimer = null;
+function scheduleSave() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(persistState, 400);
+}
+
+function getPuzzleItems() {
+  return dom.puzzleList.querySelectorAll(".navbar-item[data-puzzle]");
+}
+
+function getPuzzleItem(id) {
+  return dom.puzzleList.querySelector(`.navbar-item[data-puzzle="${id}"]`);
+}
+
+function setStatus(text) {
+  if (currentPuzzle) {
+    currentPuzzle.six = text;
+  }
+  dom.six.textContent = text;
+  scheduleSave();
+}
+
+function setSecret(text) {
+  if (currentPuzzle) {
+    currentPuzzle.seven = text;
+  }
+  dom.seven.textContent = text;
+  scheduleSave();
+}
+
+function setPuzzleCheckedIcon(id) {
+  const item = getPuzzleItem(id);
+  const stateIcon = item?.querySelector(".puzzle-state");
+  if (!item || !stateIcon) {
+    return;
+  }
+  stateIcon.innerHTML = '<i class="fa-regular fa-circle-check" aria-hidden="true"></i>';
+  item.classList.add("done");
+}
+
+function getCanonicalTokenForCurrentPuzzle(board, id) {
+  function getBits(kind, encoder) {
+    const bits = [];
+    for (let by = 1; by < board.maxby; by++) {
+      for (let bx = 1; bx < board.maxbx; bx++) {
+        if (bx % 2 === 0 && by % 2 === 0) {
+          continue;
+        }
+
+        const parity = (bx + by) % 2;
+        if (kind === "cell" && parity === 0) {
+          bits.push(encoder(board.getc(bx, by)));
+        } else if (kind === "border" && parity === 1) {
+          bits.push(encoder(board.getb(bx, by)));
+        }
+      }
+    }
+    return bits.join("");
+  }
+
+  switch (id) {
+    case "tapa":
+    case "nurikabe":
+      return getBits("cell", cell => cell.qans);
+    case "skyscrapers":
+      return getBits("cell", cell => cell.anum + 1);
+    case "kakuro":
+      return getBits("cell", cell => cell.ques === 51 ? 0 : cell.anum + 1);
+    case "fillomino":
+      return getBits("border", border => border.qans | border.isCmp());
+    case "shikaku":
+      return getBits("border", border => border.qans);
+  }
+}
+
+function getSecretForPuzzle(id, key) {
+  const ct = getPuzzleItem(id)?.dataset.ct;
+  const payload = {ct, iv: "sixsevenSIXSEVEN", iter: 6767, salt: "sixseven+67="};
+  return sjcl.decrypt(key, JSON.stringify(payload));
+}
+
+function updatePuzzleListUI() {
+  for (const item of getPuzzleItems()) {
+    item.classList.toggle("is-active", item.dataset.puzzle === currentPuzzle?.id);
+  }
+}
+
+function checkCurrentPuzzle(activeMode = false) {
+  if (!currentPuzzle?.ready) {
+    return;
+  }
+
+  const result = currentPuzzle.check(activeMode);
+
+  if (result.complete) {
+    currentPuzzle.done = true;
+    setPuzzleCheckedIcon(currentPuzzle.id);
+    setStatus("Correct solution!");
+    const solution = getCanonicalTokenForCurrentPuzzle(currentPuzzle.board, currentPuzzle.id);
+    setSecret(getSecretForPuzzle(currentPuzzle.id, solution));
+  } else if (activeMode) {
+    setStatus(result.text || "Not solved yet.");
+  }
+}
+
+function switchPuzzle(nextId) {
+  currentPuzzle = puzzles[nextId];
+
+  for (const item of getPuzzleItems()) {
+    const id = item.dataset.puzzle;
+    const board = document.querySelector(`[data-board="${id}"]`);
+    board?.classList.toggle("active", id === nextId);
+    item.classList.toggle("is-active", id === nextId);
+  }
+
+  if (currentPuzzle) {
+    pzpr.connectKeyEvents(currentPuzzle);
+    dom.six.textContent = currentPuzzle.six;
+    dom.seven.textContent = currentPuzzle.seven;
+  }
+
+  scheduleSave();
+}
+
+function initPuzzleList() {
+  for (const item of getPuzzleItems()) {
+    const id = item.dataset.puzzle;
+    const label = item.dataset.label || (id[0].toUpperCase() + id.slice(1));
+    const rulesUrl = `https://puzz.link/rules.html?${id}`;
+
+    item.href = "#";
+    item.setAttribute("aria-label", `Switch to ${label}`);
+    item.innerHTML = `<span class="puzzle-label">${label}</span><span class="puzzle-state"><i class="fa-solid fa-circle-question" aria-hidden="true"></i></span>`;
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      switchPuzzle(id);
+      item.blur();
+    });
+
+    const stateIcon = item.querySelector(".puzzle-state");
+    if (stateIcon) {
+      stateIcon.title = `Rules: ${label}`;
+      stateIcon.setAttribute("aria-label", `Open rules for ${label}`);
+      const openRules = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        window.open(rulesUrl, "_blank", "noopener,noreferrer");
+      };
+      stateIcon.addEventListener("click", openRules);
+      stateIcon.addEventListener("auxclick", openRules);
+    }
+  }
+}
+
+function initNavbarBurger() {
+  const burger = document.querySelector(".navbar-burger");
+  if (!burger) {
+    return;
+  }
+  const menu = document.getElementById(burger.dataset.target);
+  const toggle = () => {
+    const open = burger.classList.toggle("is-active");
+    menu?.classList.toggle("is-active", open);
+    burger.setAttribute("aria-expanded", String(open));
+  };
+  burger.addEventListener("click", toggle);
+  burger.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggle();
+    }
+  });
+}
+
+function attachControls() {
+  dom.checkBtn.addEventListener("click", () => checkCurrentPuzzle(true));
+  dom.undoBtn.addEventListener("click", () => currentPuzzle?.undo());
+  dom.redoBtn.addEventListener("click", () => currentPuzzle?.redo());
+  dom.clearBtn.addEventListener("click", () => {
+    currentPuzzle?.ansclear();
+    setStatus("Answer erased.");
+  });
+}
+
+function buildBoards() {
+  for (const item of getPuzzleItems()) {
+    const id = item.dataset.puzzle;
+    const src = item.dataset.src;
+    // Only reuse saved progress if it belongs to the same puzzle src.
+    const saved = savedState.puzzles?.[id];
+    const restore = saved && saved.src === src;
+
+    const board = document.createElement("div");
+    board.className = "puzzle-board";
+    board.dataset.board = id;
+    dom.boardStack.append(board);
+
+    const puzzle = new pzpr.Puzzle(board, {type: "player"});
+    puzzle.id = id;
+    puzzle.srcRef = src;
+    puzzle.six = restore ? saved.six : `Playing ${id[0].toUpperCase() + id.slice(1)}`;
+    puzzle.seven = restore ? saved.seven : "";
+    puzzle.done = restore ? !!saved.done : false;
+
+    puzzle.on("ready", () => {
+      // Cap the number-input cycle (the touch buttons otherwise run up to the
+      // board area, e.g. 1..100, which is slow to cycle through).
+      if (item.dataset.maxnum) {
+        puzzle.klass.Cell.prototype.maxnum = Number(item.dataset.maxnum);
+      }
+      if (id === currentPuzzle?.id) {
+        pzpr.connectKeyEvents(puzzle);
+      }
+    });
+
+    puzzle.on("fail-open", () => {
+      setStatus(`Failed to open ${id}.`);
+    });
+
+    puzzle.on("history", scheduleSave);
+
+    // A saved FILE_PZPRV3 payload encodes the problem and the answer, so opening it
+    // restores both; otherwise fall back to the plain problem src.
+    puzzle.open(restore ? saved.data : src);
+    if (puzzle.done) {
+      setPuzzleCheckedIcon(id);
+    }
+    puzzles[id] = puzzle;
+  }
+}
+
+function init() {
+  initPuzzleList();
+  initNavbarBurger();
+  attachControls();
+  buildBoards();
+
+  const ids = [...getPuzzleItems()].map((item) => item.dataset.puzzle);
+  const activeId = ids.includes(savedState.active) ? savedState.active : ids[0];
+  if (activeId) switchPuzzle(activeId);
+  updatePuzzleListUI();
+
+  // Flush the latest state when leaving or backgrounding the page (covers refresh,
+  // navigation away, and tab/app switches), since the debounced save may not run.
+  window.addEventListener("pagehide", persistState);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) persistState();
+  });
+}
+
+if (!window.pzpr) {
+  setStatus("Failed to load pzpr.js. Check your internet connection.");
+} else {
+  pzpr.on("load", init);
+}
+    </script>
+  </body>
+</html>

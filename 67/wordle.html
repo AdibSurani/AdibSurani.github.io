@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wordle Painter</title>
+  <style>
+    :root {
+      --bg: #121213;
+      --panel: #1d1d20;
+      --panel2: #242429;
+      --text: #f8f8f8;
+      --muted: #b7b7bd;
+      --border: #3a3a3c;
+      --green: #538d4e;
+      --yellow: #b59f3b;
+      --gray: #3a3a3c;
+      --bad: #f87171;
+      --good: #86efac;
+      --accent: #8b5cf6;
+      --shadow: rgba(0,0,0,.35);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #252533 0%, var(--bg) 45%, #09090a 100%);
+      color: var(--text);
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      padding: 22px;
+    }
+
+    main {
+      width: min(1050px, 100%);
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .hero, .card {
+      background: color-mix(in srgb, var(--panel) 92%, transparent);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 18px 55px var(--shadow);
+    }
+
+    .hero {
+      padding: 22px;
+      display: grid;
+      gap: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(26px, 5vw, 44px);
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      max-width: 70ch;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: minmax(170px, 260px) auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    @media (max-width: 720px) {
+      .controls { grid-template-columns: 1fr; }
+      body { padding: 12px; }
+      .hero { padding: 16px; }
+    }
+
+    input[type="text"] {
+      font: 800 28px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      background: #0f0f11;
+      border: 2px solid var(--border);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 13px 14px;
+      outline: none;
+      width: 100%;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
+    }
+
+    button, select, label.toggle {
+      font: 700 15px/1 ui-sans-serif, system-ui, sans-serif;
+      border: 1px solid var(--border);
+      background: var(--panel2);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 11px 13px;
+    }
+
+    button {
+      cursor: pointer;
+      transition: transform .05s ease, background .12s ease, border-color .12s ease;
+    }
+
+    button:hover { background: #303039; }
+    button:active { transform: translateY(1px); }
+    button.primary { background: var(--accent); border-color: var(--accent); }
+    button.primary:hover { background: #7c3aed; }
+    button:disabled { opacity: .5; cursor: not-allowed; }
+
+    .row-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    label.toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .status {
+      font-size: 14px;
+      color: var(--muted);
+      min-height: 1.3em;
+    }
+
+    .status.good { color: var(--good); }
+    .status.bad { color: var(--bad); }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(320px, 1fr) minmax(270px, 370px);
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .card { padding: 18px; }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .board-wrap {
+      display: grid;
+      gap: 14px;
+      justify-items: start;
+    }
+
+    .board {
+      display: grid;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 7px;
+    }
+
+    .guess-row {
+      display: grid;
+      grid-template-columns: repeat(5, 54px) auto;
+      gap: 7px;
+      align-items: center;
+    }
+
+    @media (max-width: 520px) {
+      .guess-row { grid-template-columns: repeat(5, min(15.5vw, 54px)); }
+      .word-label { grid-column: 1 / -1; margin-top: 2px; }
+    }
+
+    .tile {
+      width: 54px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border: 2px solid #565758;
+      border-radius: 5px;
+      font: 900 25px/1 ui-sans-serif, system-ui, sans-serif;
+      text-transform: uppercase;
+      user-select: none;
+      color: white;
+    }
+
+    @media (max-width: 520px) {
+      .tile { width: min(15.5vw, 54px); font-size: min(7vw, 25px); }
+    }
+
+    .tile.G { background: var(--green); border-color: var(--green); }
+    .tile.Y { background: var(--yellow); border-color: var(--yellow); }
+    .tile.x { background: var(--gray); border-color: var(--gray); }
+
+    .word-label {
+      margin-left: 8px;
+      font: 800 19px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      letter-spacing: .07em;
+      color: #e9e9ed;
+    }
+
+    .meta {
+      display: grid;
+      gap: 8px;
+      color: var(--muted);
+      line-height: 1.4;
+      font-size: 14px;
+    }
+
+    .pillbox {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--border);
+      background: #151518;
+      border-radius: 999px;
+      padding: 6px 9px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+    .swatch.G { background: var(--green); }
+    .swatch.Y { background: var(--yellow); }
+
+    .candidates {
+      display: grid;
+      gap: 10px;
+      max-height: 540px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    details {
+      background: #151518;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 10px 11px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: #ededf2;
+    }
+
+    .words {
+      margin-top: 9px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chip {
+      font: 750 13px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      letter-spacing: .03em;
+      background: #24242a;
+      border: 1px solid #393942;
+      border-radius: 999px;
+      padding: 6px 8px;
+      color: #ededf2;
+    }
+
+    .empty {
+      padding: 24px;
+      border: 1px dashed #55555d;
+      border-radius: 16px;
+      color: var(--muted);
+      line-height: 1.45;
+      background: #151518;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 145px;
+      resize: vertical;
+      background: #101012;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      font: 13px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .tiny { font-size: 12px; color: var(--muted); }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>Wordle Painter</h1>
+      <p class="sub">
+        Type a 5-letter answer. The page tries the four connected “67” templates, scores guesses with Wordle’s duplicate-letter rules, and picks a random valid six-row grid.
+      </p>
+      <div class="controls">
+        <input id="answer" type="text" maxlength="5" value="EARTH" autocomplete="off" spellcheck="false" aria-label="Answer word" />
+        <div class="row-buttons">
+          <button id="again" class="primary">Randomise</button>
+          <button id="copy">Copy guesses</button>
+          <label class="toggle"><input id="noRepeats" type="checkbox" checked /> no repeats</label>
+          <label class="toggle"><input id="preferCommon" type="checkbox" checked /> prefer normal-ish words</label>
+        </div>
+      </div>
+      <div id="status" class="status">Loading word list…</div>
+    </section>
+
+    <section class="layout">
+      <div class="card">
+        <h2>Result</h2>
+        <div id="result" class="board-wrap">
+          <div class="empty">Waiting for the word list.</div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h2>Candidate buckets</h2>
+        <div id="candidates" class="candidates">
+          <div class="empty">Once a word is entered, this shows the candidate guesses for the chosen template.</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="fallback" class="card hidden">
+      <h2>Word list fallback</h2>
+      <p class="sub">
+        The automatic fetch failed. Paste a newline-separated 5-letter word list here, then press “Use pasted list”.
+      </p>
+      <textarea id="pasteList" placeholder="crane&#10;slate&#10;...&#10;"></textarea>
+      <div class="row-buttons" style="margin-top:10px">
+        <button id="usePaste" class="primary">Use pasted list</button>
+      </div>
+    </section>
+  </main>
+
+<script>
+(() => {
+  "use strict";
+
+  const WORDLIST_URL = "https://raw.githubusercontent.com/alex1770/wordle/main/wordlist_all";
+  const CACHE_KEY = "wordle67.wordlist.v1." + WORDLIST_URL;
+
+  const $ = (id) => document.getElementById(id);
+
+  const baseTemplates = [
+    {
+      id: "A",
+      label: "green 6 above yellow 7",
+      rows: ["GGGxx", "GxYYY", "GGGxY", "GxGxY", "GGGxY", "xxxxY"],
+    },
+    {
+      id: "B",
+      label: "green 6 under yellow 7",
+      rows: ["xxYYY", "GGGxY", "GxxxY", "GGGxY", "GxGxY", "GGGxx"],
+    },
+  ];
+
+  function swapGY(s) {
+    return s.replace(/[GY]/g, c => c === "G" ? "Y" : "G");
+  }
+
+  const templates = [
+    ...baseTemplates,
+    ...baseTemplates.map(t => ({
+      id: t.id + "-swap",
+      label: t.label.replace("green", "TEMP").replace("yellow", "green").replace("TEMP", "yellow"),
+      rows: t.rows.map(swapGY),
+    })),
+  ];
+
+  // Not authoritative: just a gentle ranking boost for guesses that look like normal pub-quiz English.
+  // The algorithm still works without this list; it only affects which valid solution is shown first.
+  const commonish = new Set(`
+about above abuse actor acute admit adopt adult after again agent agree ahead alarm album alert alike alive allow alone along alter among anger angle angry apart apple apply arena argue arise array aside asset audio audit avoid award aware badly baker bases basic beach began begin begun being below bench birth black blame blank blast blind block blood board boast bonus boost booth bound brain brand brass brave bread break breed brick bride brief bring broad broke brown build built buyer cabin cable calm camp carry carve cause chain chair chaos charm chart chase cheap cheat check cheek chest chief child civil claim class clean clear climb clock close cloud coach coast color comic couch cough could count court cover craft crash crazy cream crime cross crowd crown crude curve cycle daily dance dated dealt death debug delay depth doing dozen draft drain drama drank drawn dream dress dried drill drink drive drove dying eager early earth eight elite empty enact enemy enjoy enter entry equal error event every exact exist extra faith false fault favor feast fence fewer field fifth fifty fight final first fixed flash fleet flesh floor focus force forth found frame fresh front fruit fully funny giant given glass gloss grade grand grant grape grasp grass great green greet grief gross group guard guess guest guide happy harsh heart heavy hence honor horse hotel house human ideal image index inner input issue ivory joint judge known label large laser later laugh layer learn least leave legal lemon level light limit local loose lower lucky lunch magic major maker march match maybe metal might minor model money month moral motor mount mouse mouth movie music naive nasty naval never night noble noise north novel nurse occur ocean offer often order other ounce paint panel panic paper party peace phase phone photo piece pilot pitch place plain plane plant plate point pound power press price pride prime print prior prize proof proud prove queen quick quiet quite radio raise range rapid ratio reach react ready realm rearm refer relax relay reply right rival river robin roman rough round route royal rural scale scene scope score sense serve seven shall shape share sharp sheep sheet shelf shell shift shine shirt shock shoot short shown side sight since skill sleep slice slide slope small smart smile smoke solid solve sonar sound south space spare speak spear speed spell spend spent spine split spoke sport squad staff stage stair stake stale stand stare start state steam steel steep stick still stock stone stood store storm story strip stuck style sugar suite swear sweat sweet table taken taste teach teeth thank their theme there thick thing think third those three threw throw tight title today topic total touch tough tower trace track trade train treat trend trial tribe trick tried truck truly trust truth twice under union unity until upper upset urban usage usual vague valid value video vital voice waste watch water wheel where which while white whole whose wider woman women world worry worth would wound write wrong wrote young youth`.trim().split(/\s+/));
+
+  let words = [];
+  let lastSolution = null;
+  let lastBuckets = null;
+
+  function setStatus(text, cls="") {
+    const el = $("status");
+    el.textContent = text;
+    el.className = "status" + (cls ? " " + cls : "");
+  }
+
+  function parseWordList(text) {
+    const out = [...new Set(
+      text.toLowerCase()
+        .split(/[^a-z]+/)
+        .filter(w => /^[a-z]{5}$/.test(w))
+    )].sort();
+    return out;
+  }
+
+  async function loadWords() {
+    try {
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (cached) {
+        words = parseWordList(cached);
+        if (words.length > 1000) {
+          setStatus(`Loaded ${words.length.toLocaleString()} cached guesses. Searches are local now.`, "good");
+          solve();
+          // Refresh quietly in the background, in case the source changed.
+          fetchFresh(true);
+          return;
+        }
+      }
+    } catch (_) {}
+    await fetchFresh(false);
+  }
+
+  async function fetchFresh(silent) {
+    try {
+      if (!silent) setStatus("Fetching word list once…");
+      const resp = await fetch(WORDLIST_URL, { cache: "no-store" });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const text = await resp.text();
+      const parsed = parseWordList(text);
+      if (parsed.length < 1000) throw new Error("word list looked too small");
+      words = parsed;
+      try { localStorage.setItem(CACHE_KEY, text); } catch (_) {}
+      setStatus(`Loaded ${words.length.toLocaleString()} guesses. Cached for future local searches.`, "good");
+      solve();
+    } catch (err) {
+      if (!silent) {
+        setStatus("Could not fetch the word list. Paste one below instead.", "bad");
+        $("fallback").classList.remove("hidden");
+        $("result").innerHTML = `<div class="empty">Fetch failed: ${escapeHTML(String(err.message || err))}</div>`;
+      }
+    }
+  }
+
+  function score(guess, answer) {
+    const result = ["x", "x", "x", "x", "x"];
+    const counts = Object.create(null);
+
+    for (let i = 0; i < 5; i++) {
+      if (guess[i] === answer[i]) result[i] = "G";
+      else counts[answer[i]] = (counts[answer[i]] || 0) + 1;
+    }
+    for (let i = 0; i < 5; i++) {
+      if (result[i] === "G") continue;
+      const ch = guess[i];
+      if ((counts[ch] || 0) > 0) {
+        result[i] = "Y";
+        counts[ch]--;
+      }
+    }
+    return result.join("");
+  }
+
+  function shuffled(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function wordCost(w) {
+    const repeats = 5 - new Set(w).size;
+    const commonBonus = commonish.has(w) ? 0 : 1;
+    // Avoid extremely Scrabble-y looking stuff when possible.
+    const rareLetters = [...w].filter(c => "jqxz".includes(c)).length;
+    return commonBonus * 10 + repeats * 2 + rareLetters;
+  }
+
+  function prepareBuckets(answer, template) {
+    const wanted = new Set(template.rows);
+    const buckets = Object.fromEntries([...wanted].map(p => [p, []]));
+    for (const w of words) {
+      const p = score(w, answer);
+      if (wanted.has(p)) buckets[p].push(w);
+    }
+
+    const preferCommon = $("preferCommon").checked;
+    for (const p of Object.keys(buckets)) {
+      const list = shuffled(buckets[p]);
+      if (preferCommon) {
+        list.sort((a, b) => wordCost(a) - wordCost(b));
+        // Keep the top band, but shuffle within it so Randomise actually feels random.
+        const cutoff = Math.min(list.length, 80);
+        const head = shuffled(list.slice(0, cutoff)).sort((a, b) => wordCost(a) - wordCost(b));
+        buckets[p] = head.concat(shuffled(list.slice(cutoff)));
+      } else {
+        buckets[p] = list;
+      }
+    }
+    return buckets;
+  }
+
+  function chooseWords(rows, buckets, noRepeats) {
+    if (rows.some(p => !buckets[p] || buckets[p].length === 0)) return null;
+
+    const order = rows.map((p, i) => i).sort((i, j) => buckets[rows[i]].length - buckets[rows[j]].length);
+    const chosen = Array(rows.length).fill(null);
+    const used = new Set();
+    const limitPerRow = $("preferCommon").checked ? 250 : 1000;
+
+    function dfs(k) {
+      if (k === order.length) return true;
+      const i = order[k];
+      const p = rows[i];
+      const candidates = buckets[p].slice(0, limitPerRow);
+      for (const w of candidates) {
+        if (noRepeats && used.has(w)) continue;
+        chosen[i] = w;
+        used.add(w);
+        if (dfs(k + 1)) return true;
+        used.delete(w);
+        chosen[i] = null;
+      }
+      return false;
+    }
+    return dfs(0) ? chosen : null;
+  }
+
+  function solve() {
+    const raw = $("answer").value.toLowerCase().replace(/[^a-z]/g, "").slice(0, 5);
+    if ($("answer").value !== raw.toUpperCase()) $("answer").value = raw.toUpperCase();
+
+    if (raw.length !== 5) {
+      $("result").innerHTML = `<div class="empty">Type a 5-letter answer.</div>`;
+      $("candidates").innerHTML = `<div class="empty">No candidates yet.</div>`;
+      lastSolution = null;
+      return;
+    }
+    if (!words.length) {
+      $("result").innerHTML = `<div class="empty">Waiting for the word list.</div>`;
+      lastSolution = null;
+      return;
+    }
+
+    const noRepeats = $("noRepeats").checked;
+    const candidates = [];
+
+    for (const t of shuffled(templates)) {
+      const buckets = prepareBuckets(raw, t);
+      const pick = chooseWords(t.rows, buckets, noRepeats);
+      if (pick) candidates.push({ template: t, words: pick, buckets });
+    }
+
+    if (!candidates.length && noRepeats) {
+      // Nice fallback: if no-repeat is impossible, try again allowing repeats so the page can say something useful.
+      for (const t of shuffled(templates)) {
+        const buckets = prepareBuckets(raw, t);
+        const pick = chooseWords(t.rows, buckets, false);
+        if (pick) candidates.push({ template: t, words: pick, buckets, usedRepeats: true });
+      }
+    }
+
+    if (!candidates.length) {
+      lastSolution = null;
+      lastBuckets = null;
+      $("result").innerHTML = `<div class="empty"><b>${raw.toUpperCase()}</b> looks impossible for the four exact connected 67 templates on this word list.</div>`;
+      $("candidates").innerHTML = renderAllBottlenecks(raw);
+      return;
+    }
+
+    // Bias toward no-repeat, then fewer weird words.
+    candidates.sort((a, b) => {
+      const repA = new Set(a.words).size === a.words.length ? 0 : 1;
+      const repB = new Set(b.words).size === b.words.length ? 0 : 1;
+      const costA = a.words.reduce((s, w) => s + wordCost(w), 0);
+      const costB = b.words.reduce((s, w) => s + wordCost(w), 0);
+      return repA - repB || costA - costB || Math.random() - 0.5;
+    });
+
+    const sol = candidates[0];
+    lastSolution = { answer: raw, ...sol };
+    lastBuckets = sol.buckets;
+    renderSolution(sol, raw);
+    renderBuckets(sol, raw);
+  }
+
+  function renderSolution(sol, answer) {
+    const repeats = new Set(sol.words).size !== sol.words.length;
+    const note = sol.usedRepeats
+      ? "No no-repeat grid found; showing a repeated-word grid."
+      : repeats
+        ? "Uses a repeated word."
+        : "No repeated words.";
+
+    const rowsHTML = sol.words.map((w, r) => {
+      const pat = score(w, answer);
+      const tiles = [...w].map((ch, i) => `<div class="tile ${pat[i]}">${ch}</div>`).join("");
+      return `<div class="guess-row">${tiles}<div class="word-label">${w.toUpperCase()}</div></div>`;
+    }).join("");
+
+    $("result").innerHTML = `
+      <div class="board">${rowsHTML}</div>
+      <div class="meta">
+        <div><b>${answer.toUpperCase()}</b> · ${escapeHTML(sol.template.label)}</div>
+        <div class="pillbox">
+          <span class="pill"><span class="swatch Y"></span>yellow</span>
+          <span class="pill"><span class="swatch G"></span>green</span>
+          <span class="pill">${escapeHTML(note)}</span>
+        </div>
+        <div class="tiny">Patterns: ${sol.template.rows.map(escapeHTML).join(" · ")}</div>
+      </div>
+    `;
+  }
+
+  function renderBuckets(sol, answer) {
+    const uniqueRows = [...new Set(sol.template.rows)];
+    $("candidates").innerHTML = uniqueRows.map(p => {
+      const all = sol.buckets[p] || [];
+      const shown = all.slice(0, 80);
+      return `
+        <details ${all.length <= 10 ? "open" : ""}>
+          <summary>${escapeHTML(p)} · ${all.length.toLocaleString()} candidate${all.length === 1 ? "" : "s"}</summary>
+          <div class="words">
+            ${shown.map(w => `<span class="chip">${w.toUpperCase()}</span>`).join("")}
+            ${all.length > shown.length ? `<span class="chip">+${(all.length - shown.length).toLocaleString()} more</span>` : ""}
+          </div>
+        </details>
+      `;
+    }).join("");
+  }
+
+  function renderAllBottlenecks(answer) {
+    const allPatterns = [...new Set(templates.flatMap(t => t.rows))];
+    const counts = [];
+    for (const p of allPatterns) {
+      let n = 0;
+      for (const w of words) if (score(w, answer) === p) n++;
+      counts.push([p, n]);
+    }
+    counts.sort((a, b) => a[1] - b[1]);
+    return `<div class="empty">Smallest relevant buckets:<br>${counts.map(([p,n]) => `<b>${escapeHTML(p)}</b>: ${n.toLocaleString()}`).join(" · ")}</div>`;
+  }
+
+  function copyGuesses() {
+    if (!lastSolution) return;
+    const lines = [
+      lastSolution.answer.toUpperCase(),
+      ...lastSolution.words.map(w => w.toUpperCase()),
+    ];
+    navigator.clipboard?.writeText(lines.join("\n"));
+    setStatus("Copied answer + guesses to clipboard.", "good");
+  }
+
+  function escapeHTML(s) {
+    return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"}[c]));
+  }
+
+  $("answer").addEventListener("input", solve);
+  $("again").addEventListener("click", solve);
+  $("copy").addEventListener("click", copyGuesses);
+  $("noRepeats").addEventListener("change", solve);
+  $("preferCommon").addEventListener("change", solve);
+  $("usePaste").addEventListener("click", () => {
+    const parsed = parseWordList($("pasteList").value);
+    if (parsed.length < 10) {
+      setStatus("That pasted list is too small.", "bad");
+      return;
+    }
+    words = parsed;
+    setStatus(`Using pasted list with ${words.length.toLocaleString()} guesses.`, "good");
+    solve();
+  });
+
+  loadWords();
+})();
+</script>
+</body>
+</html>
