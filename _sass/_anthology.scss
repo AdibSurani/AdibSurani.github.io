@@ -1,0 +1,153 @@
+.anthology {
+  font-size: 0.88em;
+  line-height: 1.42;
+
+  h2 {
+    font-size: 1.45em;
+    margin-top: 1.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.12em;
+    margin-top: 1.15rem;
+    margin-bottom: 0.25rem;
+  }
+
+  h4 {
+    font-size: 1em;
+    margin: 0.85rem 0 0.2rem;
+  }
+
+  p {
+    margin: 0.35rem 0 0.65rem;
+  }
+
+  details {
+    margin: 0.55rem 0;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  ul.compact {
+    margin-top: 0.25rem;
+    margin-bottom: 0.65rem;
+  }
+
+  ul.compact li {
+    margin: 0.12rem 0;
+  }
+}
+
+.anthology-toc {
+  float: right;
+  width: 15.5rem;
+  margin: 0 0 1rem 1.5rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  line-height: 1.35;
+
+  strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.15rem;
+  }
+
+  li {
+    margin: 0.08rem 0;
+  }
+}
+
+.anthology-clear {
+  clear: both;
+}
+
+.anthology-entry {
+  display: grid;
+  grid-template-columns: 5.7rem minmax(0, 1fr) max-content;
+  column-gap: 0.8rem;
+  align-items: baseline;
+  margin-inline: -0.35rem;
+  padding: 0.10rem 0.35rem;
+  border-radius: 0.2rem;
+
+  &:hover,
+  &:focus-within {
+    background: rgba(128, 128, 128, 0.10);
+  }
+}
+
+.anthology-entry--simple {
+  grid-template-columns: minmax(0, 1fr) max-content;
+}
+
+.anthology-kind {
+  font-family: monospace;
+  font-size: 0.92em;
+  opacity: 0.65;
+}
+
+.anthology-title {
+  min-width: 0;
+}
+
+.anthology-meta {
+  color: var(--global-text-color-light, #777);
+  font-size: 0.92em;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.anthology-note {
+  margin: 0.02rem 0 0.18rem 6.5rem;
+  color: var(--global-text-color-light, #777);
+  font-size: 0.86em;
+}
+
+@media (max-width: 800px) {
+  .anthology-toc {
+    float: none;
+    width: auto;
+    margin: 0.75rem 0 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .anthology-entry {
+    grid-template-columns: 4.9rem minmax(0, 1fr);
+    column-gap: 0.55rem;
+  }
+
+  .anthology-entry--simple {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .anthology-meta {
+    grid-column: 2;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .anthology-entry--simple .anthology-meta {
+    grid-column: 1;
+  }
+
+  .anthology-note {
+    margin-left: 5.45rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .page:has(.anthology) {
+    padding-inline-end: 0;
+  }
+}
