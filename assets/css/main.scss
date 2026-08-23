@@ -7,6 +7,23 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+/* More conventional reading size for actual page/post content only. */
+.page__content {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .page__content {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page__content {
+    font-size: 18px;
+  }
+}
+
 .social-icons {
   .fa-discord {
     color: #5865F2;

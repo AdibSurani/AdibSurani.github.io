@@ -241,9 +241,9 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/crypto/teddiursa">Teddiursa</a></span><span class="anthology-meta">Easy</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/crypto/zweilous">Zweilous</a></span><span class="anthology-meta">Medium</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/crypto/missingno">MissingNo.</a></span><span class="anthology-meta">Hard</span></div>
+<div class="anthology-note">↳ Later inspired <strong>MissingNo.1</strong>, <strong>MissingNo.2</strong> and <strong>MissingNo.3</strong> revenge challenges by soon-haari.</div>
 <div class="anthology-entry"><span class="anthology-kind">pwn</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/pwn/gisnep">Gisnep</a></span><span class="anthology-meta">Easy</span></div>
 <div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/rev/rise-up-lights">Rise Up Lights</a></span><span class="anthology-meta">Medium</span></div>
-<div class="anthology-note">↳ Later inspired <strong>MissingNo.1</strong>, <strong>MissingNo.2</strong> and <strong>MissingNo.3</strong> revenge challenges by soon-haari.</div>
 ### <a href="https://github.com/ctf-mt/maltactf-2025-quals">2025 — MaltaCTF Quals</a> · 2025
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/ctf-mt/maltactf-2025-quals/tree/master/crypto/2log">2log</a></span><span class="anthology-meta">67 solves · with Warri</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/ctf-mt/maltactf-2025-quals/tree/master/crypto/grammar-nazi">grammar nazi</a></span><span class="anthology-meta">25 solves</span></div>
@@ -399,5 +399,7 @@ I tend to appear in translation projects where the text is hidden behind an inco
 - **[G-Research Financial Forecasting Competition](https://financialforecasting.gresearch.co.uk/leaderboard)** — 18th place.
 - **[Letters and Numbers S1E17](https://www.youtube.com/watch?v=OnBRelDcm-I)** — August 2010.
 - **[56-postcard photomosaic](https://adib.fourplusfive.com/static/photomosaic.jpg)** — a large crowdsourced project in 2012 where I got people from all around the world to send 56 postcards; combined the right way, they form a photo taken from my wife's birthday in 2011.
+
+*Last updated: 19 August 2026*
 
 </div>
