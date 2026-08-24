@@ -32,7 +32,7 @@ My full name is Muhammad Adib bin Surani, but [Malay names](https://en.wikipedia
 
 I am a mathematician, puzzle hunter, and CTF player. In the puzzle world I'm usually just Adib, but in the hacking scene (be it CTF or game translation), I typically go by the pseudonym Neobeo.
 
-This isn't really meant to be a portfolio as much as it is an anthology: A loose index of things I have made, written, reverse engineered, translated, solved, or got otherwise myself involved it over the years.
+This isn't really meant to be a portfolio as much as it is an anthology: A loose index of things I have made, written, reverse engineered, translated, solved, or otherwise got myself involved in over the years.
 
 ## Puzzles
 
@@ -78,7 +78,7 @@ Puzzle hunts were a large part of my life before CTFs took over the same part of
 
 #### [MUMS 2013](https://web.archive.org/web/20200322070703/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2013/puzzles.html) — lead organiser · May 2013
 
-<div class="anthology-entry"><span class="anthology-kind">3.3</span><span class="anthology-title"><a href="https://web.archive.org/web/20200325123639/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2013/puzzles/3.3_Diagnosus_ghQ3AcbJ.pdf">Diagnosus</a></span><span class="anthology-meta"></span></div>
+<div class="anthology-entry"><span class="anthology-kind">3.3</span><span class="anthology-title"><a href="https://web.archive.org/web/20200325123639/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2013/puzzles/3.3_Diagnosus_ghQ3AcbJ.pdf">Diagnosus</a></span><span class="anthology-meta"><a href="https://web.archive.org/web/*/http://www.ms.unimelb.edu.au/~mums/puzzlehunt/2013/puzzles/3.3_Diagnosus_ghQ3AcbJ.html">GIF</a></span></div>
 
 #### [MUMS 2014](https://web.archive.org/web/20200322070703/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2014/puzzles.html) — lead organiser · May 2014
 
@@ -125,7 +125,7 @@ Puzzle hunts were a large part of my life before CTFs took over the same part of
 <div class="anthology-entry"><span class="anthology-kind">puzzle</span><span class="anthology-title"><a href="https://adib.fourplusfive.com/static/science_festival_2016.pdf">Pursuit of Truth</a></span><span class="anthology-meta">part of a four-puzzle set</span></div>
 <div class="anthology-entry"><span class="anthology-kind">puzzle</span><span class="anthology-title"><a href="https://adib.fourplusfive.com/static/science_festival_2016.pdf">DNA Profiling</a></span><span class="anthology-meta">part of a four-puzzle set</span></div>
 
-### [REDDOThunt 2020](https://reddothunt.sg/2020/puzzles) — author · 2020
+### [REDDOThunt 2020](https://reddothunt.sg/2020/puzzles) — author · Jun 2020
 
 <div class="anthology-entry"><span class="anthology-kind">R1</span><span class="anthology-title"><a href="https://reddothunt.sg/2020/puzzle/arrowing-work">Arrowing Work</a></span><span class="anthology-meta">with Tan Chor Kiang</span></div>
 <div class="anthology-entry"><span class="anthology-kind">R1</span><span class="anthology-title"><a href="https://reddothunt.sg/2020/puzzle/office-gym">Office Gym</a></span><span class="anthology-meta"></span></div>
@@ -152,7 +152,7 @@ Puzzle hunts were a large part of my life before CTFs took over the same part of
 <div class="anthology-entry"><span class="anthology-kind">logic</span><span class="anthology-title"><a href="https://adib.fourplusfive.com/static/takeshis_castle.png">Takeshi's Castle</a></span><span class="anthology-meta">G-Research puzzle panel · Sep 2021</span></div>
 <div class="anthology-entry"><span class="anthology-kind">cryptic</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges/tree/main/misc/cryptic-crossword">skbdg cryptic crossword</a></span><span class="anthology-meta">BSides Canberra 2025 · easy · 112 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">logic</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/game/67-hunt">6-7 Puzzle Hunt</a></span><span class="anthology-meta">SekaiCTF 2026 · Normal (2) · 362 solves · <a href="/2026/happy-6-7-day/">reflection</a></span></div>
-<div class="anthology-entry"><span class="anthology-kind">wordsearch</span><span class="anthology-title">The Great Maltese Word Hunt</span><span class="anthology-meta">??? · ???</span></div>
+<div class="anthology-entry"><span class="anthology-kind">wordsearch</span><span class="anthology-title">The Great Maltese Word Hunt</span><span class="anthology-meta">Oct 2023</span></div>
 
 <details markdown="1">
 <summary>Selected cryptic clues</summary>
@@ -173,7 +173,7 @@ Puzzle hunts were a large part of my life before CTFs took over the same part of
 I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pwn, or misc. Never web.
 
 
-### <a href="https://github.com/Social-Engineering-Experts/SEETF-2022-Public">2022 — SEETF</a> · 2022
+### <a href="https://github.com/Social-Engineering-Experts/SEETF-2022-Public">2022 — SEETF</a> · Jun 2022
 
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2022-Public/tree/main/crypto/univeRSAlity">UniveRSAlity</a></span><span class="anthology-meta">27 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2022-Public/tree/main/crypto/probability">Probability</a></span><span class="anthology-meta">7 solves</span></div>
@@ -185,31 +185,20 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 <div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2022-Public/tree/main/reversing/sudocv">SudoCV</a></span><span class="anthology-meta">2 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2022-Public/tree/main/misc/To-Infinity">To Infinity</a></span><span class="anthology-meta">6 solves · with JuliaPoo</span></div>
 
-### <a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public">2023 — SEETF</a> · 2023
+### <a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public">2023 — SEETF</a> · Jun 2023
 
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">Isogeny Maze</span><span class="anthology-meta">4 solves · 496 pts</span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">Semaphore</span><span class="anthology-meta">17 solves · 483 pts</span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">Non-neutrality</span><span class="anthology-meta">author <a href="/2023/non-neutrality/">writeup</a></span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">onelinecrypto</span><span class="anthology-meta">14 solves · 486 pts · <a href="/2023/onelinecrypto/">writeup</a></span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">Shard</span><span class="anthology-meta">1 solve · 499 pts</span></div>
-<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title">1337 Word Search</span><span class="anthology-meta"></span></div>
-<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title">1337er Word Search</span><span class="anthology-meta"></span></div>
-<div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title">Woodchecker</span><span class="anthology-meta"></span></div>
-
-### 2023 — ImaginaryCTF · Aug-Nov 2023
-
-<div class="anthology-entry"><span class="anthology-kind">misc/crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/44">PyCryptoJail</a></span><span class="anthology-meta">Aug · 150 pts</span></div>
-<div class="anthology-entry"><span class="anthology-kind">rev/crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/45">Carry Out</a></span><span class="anthology-meta">Sep · 75 pts</span></div>
-<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/47">coprty</a></span><span class="anthology-meta">Nov · 50 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto">Isogeny Maze</a></span><span class="anthology-meta">4 solves · 496 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto">Semaphore</a></span><span class="anthology-meta">17 solves · 483 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto">Non-neutrality</a></span><span class="anthology-meta">author <a href="/2023/non-neutrality/">writeup</a></span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto">onelinecrypto</a></span><span class="anthology-meta">14 solves · 486 pts · <a href="/2023/onelinecrypto/">writeup</a></span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto">Shard</a></span><span class="anthology-meta">1 solve · 499 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/misc">1337 Word Search</a></span><span class="anthology-meta"></span></div>
+<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/misc">1337er Word Search</a></span><span class="anthology-meta"></span></div>
+<div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/re">Woodchecker</a></span><span class="anthology-meta"></span></div>
 
 ### 2023 — vsCTF · Sep 2023
 
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">FlagHash</span><span class="anthology-meta">4 solves · 497 pts · <a href="/2023/flaghash/">writeup</a></span></div>
-
-### 2024 — ImaginaryCTF · Jan 2024
-
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/49">RSA-2024</a></span><span class="anthology-meta">100 pts</span></div>
-<div class="anthology-note">↳ Related: <strong>FLT-2024</strong> by Fermbeo, shortly after; 2 years later <strong>RSA-2026</strong> by Water.</div>
 
 ### 2024 — Friendly Maltese Citizens · 13 May 2024
 
@@ -222,21 +211,7 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2024/tree/main/crypto/sqrt163">√163</a></span><span class="anthology-meta">Master (5) · 3 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2024/tree/main/crypto/zerodaycrypto">zerodaycrypto</a></span><span class="anthology-meta">Append (6) · 4 solves · <a href="/2024/zerodaycrypto/">writeup</a></span></div>
 
-### 2025 — ImaginaryCTF · Apr & Nov 2025
-
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/64">skedaddle</a></span><span class="anthology-meta">Apr · 75 pts</span></div>
-<div class="anthology-note">↳ Related: <a href="https://imaginaryctf.org/ArchivedChallenges/64"><strong>skedaddle revenge</strong></a> by lydxn.</div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/71">apbq-rsa-iii</a></span><span class="anthology-meta">Nov · 100 pts</span></div>
-<div class="anthology-note">↳ Successor: <a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/crypto/apbq-rsa-iv"><strong>apbq-rsa-iv</strong></a> at SekaiCTF 2026.</div>
-
-### <a href="https://github.com/project-sekai-ctf/sekaictf-2025">2025 — SekaiCTF</a> · 2025
-
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2025/tree/main/crypto/i-dream-of-genni">I Dream of Genni</a></span><span class="anthology-meta">Normal (2) · 124 solves</span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2025/tree/main/crypto/apes">APES</a></span><span class="anthology-meta">Expert (4) · 3 solves</span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2025/tree/main/crypto/unfairy-ring">unfairy-ring</a></span><span class="anthology-meta">Master (5) · 0 solves · with Sceleri</span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2025/tree/main/crypto/unfairy-ring-plusplus">unfairy-ring++</a></span><span class="anthology-meta">Append (6) · 0 solves · with Sceleri</span></div>
-
-### <a href="https://github.com/AustICCQuals/Challenges2025">2025 — OICC</a> · 2025
+### <a href="https://github.com/AustICCQuals/Challenges2025">2025 — OICC</a> · Feb 2025
 
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/crypto/teddiursa">Teddiursa</a></span><span class="anthology-meta">Easy</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/crypto/zweilous">Zweilous</a></span><span class="anthology-meta">Medium</span></div>
@@ -244,29 +219,30 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 <div class="anthology-note">↳ Later inspired <strong>MissingNo.1</strong>, <strong>MissingNo.2</strong> and <strong>MissingNo.3</strong> revenge challenges by soon-haari.</div>
 <div class="anthology-entry"><span class="anthology-kind">pwn</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/pwn/gisnep">Gisnep</a></span><span class="anthology-meta">Easy</span></div>
 <div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/rev/rise-up-lights">Rise Up Lights</a></span><span class="anthology-meta">Medium</span></div>
-### <a href="https://github.com/ctf-mt/maltactf-2025-quals">2025 — MaltaCTF Quals</a> · 2025
+### <a href="https://github.com/ctf-mt/maltactf-2025-quals">2025 — MaltaCTF Quals</a> · Jun 2025
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/ctf-mt/maltactf-2025-quals/tree/master/crypto/2log">2log</a></span><span class="anthology-meta">67 solves · with Warri</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/ctf-mt/maltactf-2025-quals/tree/master/crypto/grammar-nazi">grammar nazi</a></span><span class="anthology-meta">25 solves</span></div>
 
-### <a href="https://github.com/ctf-mt/maltactf-2025-finals">2025 — MaltaCTF Finals</a> · 2025
+### <a href="https://github.com/project-sekai-ctf/sekaictf-2025">2025 — SekaiCTF</a> · Aug 2025
 
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">Q.E.D.</span><span class="anthology-meta">3 solves</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2025/tree/main/crypto/i-dream-of-genni">I Dream of Genni</a></span><span class="anthology-meta">Normal (2) · 124 solves</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2025/tree/main/crypto/apes">APES</a></span><span class="anthology-meta">Expert (4) · 3 solves</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2025/tree/main/crypto/unfairy-ring">unfairy-ring</a></span><span class="anthology-meta">Master (5) · 0 solves · with Sceleri</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2025/tree/main/crypto/unfairy-ring-plusplus">unfairy-ring++</a></span><span class="anthology-meta">Append (6) · 0 solves · with Sceleri</span></div>
+
+### <a href="https://github.com/ctf-mt/maltactf-2025-finals">2025 — MaltaCTF Finals</a> · Sep 2025
+
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/ctf-mt/maltactf-2025-finals/tree/main/crypto">Q.E.D.</a></span><span class="anthology-meta">3 solves</span></div>
 <div class="anthology-note">↳ Adib later wrote <strong>revenqed</strong> for ICC 2026 as a revenge/sequel.</div>
 
-### <a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges">2025 — skateboarding dog CTF @ BSides Canberra</a> · 2025
+### <a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges">2025 — skateboarding dog CTF @ BSides Canberra</a> · Sep 2025
 
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges/tree/main/crypto/cheesecake-shop">cheesecake shop</a></span><span class="anthology-meta">easy · 12 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges/tree/main/crypto/hidden-number-pawblem">hidden number pawblem</a></span><span class="anthology-meta">hard · 0 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges/tree/main/rev/pensig">pensig</a></span><span class="anthology-meta">easy · 7 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges/tree/main/misc/cryptic-crossword">cryptic crossword</a></span><span class="anthology-meta">easy · 112 solves</span></div>
 
-### <a href="https://icc.ecsc.eu/">2026 — ICC, Gold Coast</a> · 2026
-
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">SBG-LCG</span><span class="anthology-meta"></span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">revenqed</span><span class="anthology-meta"></span></div>
-<div class="anthology-note">↳ Revenge/sequel to <strong>Q.E.D.</strong> (MaltaCTF Finals 2025).</div>
-
-### 2026 — OICC · 2026
+### 2026 — OICC · Feb 2026
 
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">Sky-Byte</span><span class="anthology-meta"></span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">Baby Shark</span><span class="anthology-meta"></span></div>
@@ -274,12 +250,30 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 <div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title">Neobeo Fried Chicken</span><span class="anthology-meta"></span></div>
 <div class="anthology-entry"><span class="anthology-kind">pwn</span><span class="anthology-title">ent-rop-y</span><span class="anthology-meta"></span></div>
 
+### <a href="https://icc.ecsc.eu/">2026 — ICC, Gold Coast</a> · May 2026
+
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">SBG-LCG</span><span class="anthology-meta"></span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title">revenqed</span><span class="anthology-meta"></span></div>
+<div class="anthology-note">↳ Revenge/sequel to <strong>Q.E.D.</strong> (MaltaCTF Finals 2025).</div>
+
 ### <a href="https://github.com/project-sekai-ctf/sekaictf-2026">2026 — SekaiCTF</a> · 27-29 Jun 2026
 
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/crypto/oneline6ryp7o">oneline6ryp7o</a></span><span class="anthology-meta">Easy (1) · 423 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/crypto/apbq-rsa-iv">apbq-rsa-iv</a></span><span class="anthology-meta">Master (5) · 11 solves · <a href="/2026/apbq-rsa-iv/">writeup</a></span></div>
 <div class="anthology-note">↳ Successor to <strong>apbq-rsa-iii</strong> (ImaginaryCTF 2025).</div>
 <div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/game/67-hunt">6-7 Puzzle Hunt</a></span><span class="anthology-meta">Normal (2) · 362 solves · <a href="/2026/happy-6-7-day/">reflection</a></span></div>
+
+### ImaginaryCTF · Aug 2023-Nov 2025
+
+<div class="anthology-entry"><span class="anthology-kind">misc/crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/44">PyCryptoJail</a></span><span class="anthology-meta">Aug 2023 · 150 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">rev/crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/45">Carry Out</a></span><span class="anthology-meta">Sep 2023 · 75 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/47">coprty</a></span><span class="anthology-meta">Nov 2023 · 50 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/49">RSA-2024</a></span><span class="anthology-meta">Jan 2024 · 100 pts</span></div>
+<div class="anthology-note">↳ Related: <strong>FLT-2024</strong> by Fermbeo, shortly after; 2 years later <strong>RSA-2026</strong> by Water.</div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/64">skedaddle</a></span><span class="anthology-meta">Apr 2025 · 75 pts</span></div>
+<div class="anthology-note">↳ Related: <a href="https://imaginaryctf.org/ArchivedChallenges/64"><strong>skedaddle revenge</strong></a> by lydxn.</div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/71">apbq-rsa-iii</a></span><span class="anthology-meta">Nov 2025 · 100 pts</span></div>
+<div class="anthology-note">↳ Successor: <a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/crypto/apbq-rsa-iv"><strong>apbq-rsa-iv</strong></a> at SekaiCTF 2026.</div>
 
 ## CTF writeups
 
@@ -297,6 +291,10 @@ I also write about challenges when there is something worth remembering about th
 <div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="/2025/lance-hard/">2025 — lance-hard?</a></span><span class="anthology-meta">KalmarCTF · 2 solves</span></div>
 <div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="/2025/mathjail2/">2025 — mathjail2</a></span><span class="anthology-meta">jailCTF · writeup-prize winner</span></div>
 <div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="/2026/apbq-rsa-iv/">2026 — apbq-rsa-iv</a></span><span class="anthology-meta">SekaiCTF author writeup</span></div>
+
+### Other notable CTF work
+
+<div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="https://github.com/hvrr1c4n3/My-Public-CTF-Challenges#double-rsa-0123">2023 — Double RSA 2</a></span><span class="anthology-meta">0CTF/TCTF · alternative lattice solution credited in the challenge author's writeup</span></div>
 
 <details markdown="1">
 <summary>Older writeup archives</summary>
@@ -358,11 +356,11 @@ Most of this work came from wanting to understand old games and formats just eno
 I tend to appear in translation projects where the text is hidden behind an inconvenient file format, compression scheme, video container, or game engine.
 
 - **[The Great Ace Attorney](https://scarletstudy.net/credits/)** — code and reverse engineering for Scarlet Study.
-- **[Dragon Quest Heroes: Rocket Slime 3](https://fantranslators.info/projects/rocket-slime-3/)** — hacking / reverse engineering, including custom text-redirection work.
+- **[Dragon Quest Heroes: Rocket Slime 3](https://fantranslators.info/projects/rocket-slime-3ds/)** — hacking / reverse engineering, including custom text-redirection work.
 - **[E.X. Troopers](https://fantranslators.info/projects/e-x-troopers/)** — 3DS video and texture reverse engineering, programming and patcher support.
 - **[Time Travelers](https://fantranslators.info/projects/time-travelers/)** — programming for the 2025 English main-story patch.
 - **[Dragon Quest Monsters: Joker 3](https://gbatemp.net/threads/translation-dragon-quest-monsters-joker-3.492313/)** — helped with reverse engineering.
-- **Daigasso! Band Brothers P** — an incomplete but working English translation that I would still like to revisit and release.
+- **[Daigasso! Band Brothers P](https://gbatemp.net/threads/daigasso-band-brothers-p.368948/)** — an incomplete but working English translation that I would still like to revisit and release.
 
 ## Papers
 
@@ -370,6 +368,7 @@ I tend to appear in translation projects where the text is hidden behind an inco
 - **[Wide Containers in Gaussian Networks](https://doi.org/10.1142/S0219265917410080)** — *Journal of Interconnection Networks* (2017).
 - **[The Isoperimetric Number of the Incidence Graph of PG(n,q)](https://doi.org/10.37236/6980)** — with Andrew E. Price and Sanming Zhou, *Electronic Journal of Combinatorics* (2018).
 - **[The vertex-isoperimetric number of the incidence and non-incidence graphs of unitals](https://doi.org/10.1007/s10623-018-0498-x)** — with A. M. Hui and Sanming Zhou, *Designs, Codes and Cryptography* (2019).
+- **[Super Beetle Gamer: An Introduction](https://github.com/project-sekai-ctf/sekaictf-2024/blob/main/crypto/zerodaycrypto/solution/zerodaycrypto_hint.pdf)** — hobby paper released as a hint for [zerodaycrypto](/2024/zerodaycrypto/) at SekaiCTF 2024.
 - **[Cops and Robbers on Ladder Graphs](https://adib.fourplusfive.com/static/cops_robbers.pdf)** — hobby paper.
 
 ## Talks & community
@@ -393,13 +392,22 @@ I tend to appear in translation projects where the text is hidden behind an inco
 
 ## Other
 
+### On-site CTF finals
+
+- **[Midnight Sun CTF 2022 Finals](https://ctftime.org/event/1475/)** — 7th place with ThreeTop Walk · Stockholm · Aug 2022.
+- **[Black Hat MEA CTF Finals 2022](https://ctftime.org/event/1734/)** — 3rd place with Five Boys Cry · Riyadh · Nov 2022.
+- **[GreyCTF 2023 Finals](https://ctftime.org/team/151372)** — 3rd place with Social Engineering Experts · Singapore · Jul 2023.
+- **[Black Hat MEA CTF Finals 2023](https://ctftime.org/event/2113/)** — 10th place with Boys Who Cry · Riyadh · Nov 2023.
+
+### Other other
+
 - **[Advent of Code 2021](https://adventofcode.com/2021/leaderboard)** — 99th overall · 703 points.
 - **[Advent of Code 2022](https://adventofcode.com/2022/leaderboard)** — 72nd overall · 876 points.
 - **[CryptoHack](https://cryptohack.org/user/Neobeo/)** — reached #1 in 2022.
 - **[G-Research Financial Forecasting Competition](https://financialforecasting.gresearch.co.uk/leaderboard)** — 18th place.
-- **[Letters and Numbers S1E17](https://www.youtube.com/watch?v=OnBRelDcm-I)** — August 2010.
+- **[Letters and Numbers S1E17](https://www.youtube.com/watch?v=OnBRelDcm-I)** — Aug 2010.
 - **[56-postcard photomosaic](https://adib.fourplusfive.com/static/photomosaic.jpg)** — a large crowdsourced project in 2012 where I got people from all around the world to send 56 postcards; combined the right way, they form a photo taken from my wife's birthday in 2011.
 
-*Last updated: 19 August 2026*
+*Last updated: 24 August 2026*
 
 </div>
