@@ -78,7 +78,7 @@ Puzzle hunts were a large part of my life before CTFs took over the same part of
 
 #### [MUMS 2013](https://web.archive.org/web/20200322070703/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2013/puzzles.html) — lead organiser · May 2013
 
-<div class="anthology-entry"><span class="anthology-kind">3.3</span><span class="anthology-title"><a href="https://web.archive.org/web/20200325123639/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2013/puzzles/3.3_Diagnosus_ghQ3AcbJ.pdf">Diagnosus</a></span><span class="anthology-meta"></span></div>
+<div class="anthology-entry"><span class="anthology-kind">3.3</span><span class="anthology-title"><a href="https://web.archive.org/web/20200325123639/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2013/puzzles/3.3_Diagnosus_ghQ3AcbJ.pdf">Diagnosus</a></span><span class="anthology-meta">[<a href="https://github.com/AdibSurani/challenge-archive/tree/main/2013/diagnosus">original HTML/GIF</a>]</span></div>
 
 #### [MUMS 2014](https://web.archive.org/web/20200322070703/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2014/puzzles.html) — lead organiser · May 2014
 
