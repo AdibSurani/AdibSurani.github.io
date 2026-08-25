@@ -150,9 +150,9 @@ Puzzle hunts were a large part of my life before CTFs took over the same part of
 ### Other one-off puzzles
 
 <div class="anthology-entry"><span class="anthology-kind">logic</span><span class="anthology-title"><a href="https://adib.fourplusfive.com/static/takeshis_castle.png">Takeshi's Castle</a></span><span class="anthology-meta">G-Research puzzle panel · Sep 2021</span></div>
+<div class="anthology-entry"><span class="anthology-kind">wordsearch</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2023/great-maltese-word-hunt">The Great Maltese Word Hunt</a></span><span class="anthology-meta">Oct 2023</span></div>
 <div class="anthology-entry"><span class="anthology-kind">cryptic</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges/tree/main/misc/cryptic-crossword">skbdg cryptic crossword</a></span><span class="anthology-meta">BSides Canberra 2025 · easy · 112 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">logic</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/game/67-hunt">6-7 Puzzle Hunt</a></span><span class="anthology-meta">SekaiCTF 2026 · Normal (2) · 362 solves · <a href="/2026/happy-6-7-day/">reflection</a></span></div>
-<div class="anthology-entry"><span class="anthology-kind">wordsearch</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2023/great-maltese-word-hunt">The Great Maltese Word Hunt</a></span><span class="anthology-meta">Oct 2023</span></div>
 
 <details markdown="1">
 <summary>Selected cryptic clues</summary>
@@ -205,7 +205,7 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 <div class="anthology-entry"><span class="anthology-kind">crypto/pwn</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2024/quintillion-girlfriends">The 1,000,000,000,000,000,000 Girlfriends Who Really, Really, Really, Really, Really Love You</a></span><span class="anthology-meta">private · Josh won</span></div>
 <div class="anthology-note">Originally shared in the Friendly Maltese Citizens Discord; source now archived publicly.</div>
 
-### <a href="https://github.com/project-sekai-ctf/sekaictf-2024">2024 — SekaiCTF</a> · 23-25 Aug 2024
+### <a href="https://github.com/project-sekai-ctf/sekaictf-2024">2024 — SekaiCTF</a> · Aug 2024
 
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2024/tree/main/crypto/squares-vs-cubes">Squares vs. Cubes</a></span><span class="anthology-meta">Expert (4) · 2 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2024/tree/main/crypto/sqrt163">√163</a></span><span class="anthology-meta">Master (5) · 3 solves</span></div>
@@ -263,7 +263,7 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 <div class="anthology-note">↳ Successor to <strong>apbq-rsa-iii</strong> (ImaginaryCTF 2025).</div>
 <div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/game/67-hunt">6-7 Puzzle Hunt</a></span><span class="anthology-meta">Normal (2) · 362 solves · <a href="/2026/happy-6-7-day/">reflection</a></span></div>
 
-### ImaginaryCTF · Aug 2023-Nov 2025
+### [ImaginaryCTF](https://imaginaryctf.org/)
 
 <div class="anthology-entry"><span class="anthology-kind">misc/crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/44">PyCryptoJail</a></span><span class="anthology-meta">Aug 2023 · 150 pts</span></div>
 <div class="anthology-entry"><span class="anthology-kind">rev/crypto</span><span class="anthology-title"><a href="https://imaginaryctf.org/ArchivedChallenges/45">Carry Out</a></span><span class="anthology-meta">Sep 2023 · 75 pts</span></div>
@@ -408,6 +408,6 @@ I tend to appear in translation projects where the text is hidden behind an inco
 - **[Letters and Numbers S1E17](https://www.youtube.com/watch?v=OnBRelDcm-I)** — Aug 2010.
 - **[56-postcard photomosaic](https://adib.fourplusfive.com/static/photomosaic.jpg)** — a large crowdsourced project in 2012 where I got people from all around the world to send 56 postcards; combined the right way, they form a photo taken from my wife's birthday in 2011.
 
-*Last updated: 24 August 2026*
+*Last updated: 25 August 2026*
 
 </div>
