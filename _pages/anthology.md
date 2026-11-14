@@ -98,7 +98,7 @@ Puzzle hunts were a large part of my life before CTFs took over the same part of
 <div class="anthology-entry"><span class="anthology-kind">2.1</span><span class="anthology-title"><a href="https://web.archive.org/web/20200323231100/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2015/puzzles/2.1_Word_List.pdf">Word List</a></span><span class="anthology-meta"></span></div>
 <div class="anthology-entry"><span class="anthology-kind">2.3</span><span class="anthology-title"><a href="https://web.archive.org/web/20200323231207/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2015/puzzles/2.3_5-Card_Stud.pdf">5-Card Stud</a></span><span class="anthology-meta"></span></div>
 <div class="anthology-entry"><span class="anthology-kind">3.3</span><span class="anthology-title"><a href="https://web.archive.org/web/20200323231444/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2015/puzzles/3.3_Lines_from_the_Bard.pdf">Lines from the Bard</a></span><span class="anthology-meta">with Joshua Chang</span></div>
-<div class="anthology-entry"><span class="anthology-kind">3.4</span><span class="anthology-title"><a href="https://web.archive.org/web/20200323231525/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2015/puzzles/3.4_Lock_It_In.pdf">Lock it In</a></span><span class="anthology-meta">with Tyrone Ghaswala</span></div>
+<div class="anthology-entry"><span class="anthology-kind">3.4</span><span class="anthology-title"><a href="https://web.archive.org/web/20200323231525/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2015/puzzles/3.4_Lock_It_In.pdf">Lock It In</a></span><span class="anthology-meta">with Tyrone Ghaswala</span></div>
 <div class="anthology-entry"><span class="anthology-kind">4.2</span><span class="anthology-title"><a href="https://web.archive.org/web/20200323231729/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2015/puzzles/4.2_Anthroponymy.pdf">Anthroponymy</a></span><span class="anthology-meta"></span></div>
 <div class="anthology-entry"><span class="anthology-kind">5.2</span><span class="anthology-title"><a href="https://web.archive.org/web/20200323232019/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2015/puzzles/5.2_Wise_Confucius.pdf">Wise Confucius</a></span><span class="anthology-meta">with Joshua Chang</span></div>
 <div class="anthology-entry"><span class="anthology-kind">meta</span><span class="anthology-title"><a href="https://web.archive.org/web/20200323232229/https://researchers.ms.unimelb.edu.au/~mums/puzzlehunt/2015/puzzles/Meta_Lasers_9Bu3WMkf.pdf">Lasers</a></span><span class="anthology-meta">with various others</span></div>
@@ -153,6 +153,9 @@ Puzzle hunts were a large part of my life before CTFs took over the same part of
 <div class="anthology-entry"><span class="anthology-kind">wordsearch</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2023/great-maltese-word-hunt">The Great Maltese Word Hunt</a></span><span class="anthology-meta">Oct 2023</span></div>
 <div class="anthology-entry"><span class="anthology-kind">cryptic</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges/tree/main/misc/cryptic-crossword">skbdg cryptic crossword</a></span><span class="anthology-meta">BSides Canberra 2025 · easy · 112 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">logic</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/game/67-hunt">6-7 Puzzle Hunt</a></span><span class="anthology-meta">SekaiCTF 2026 · Normal (2) · 362 solves · <a href="/2026/happy-6-7-day/">reflection</a></span></div>
+<div class="anthology-entry"><span class="anthology-kind">cryptic</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/misc/skbdg-cryptic-2026">Skateboarding Dog Cryptic 2026</a></span><span class="anthology-meta">BSides Canberra 2026 · easy · 64 solves</span></div>
+<div class="anthology-entry"><span class="anthology-kind">logic</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/misc/trailblazer">Trailblazer</a></span><span class="anthology-meta">BSides Canberra 2026 · easy · 16 solves · with chsh</span></div>
+<div class="anthology-entry"><span class="anthology-kind">logic</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/misc/moore-6s-and-7s">Moore 6s and 7s</a></span><span class="anthology-meta">BSides Canberra 2026 · medium · 10 solves</span></div>
 
 <details markdown="1">
 <summary>Selected cryptic clues</summary>
@@ -188,13 +191,13 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 ### <a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public">2023 — SEETF</a> · Jun 2023
 
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto/isogeny-maze">Isogeny Maze</a></span><span class="anthology-meta">4 solves · 496 pts</span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto/semaphore">Semaphore</a></span><span class="anthology-meta">17 solves · 483 pts</span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto/non-neutrality">Non-neutrality</a></span><span class="anthology-meta">author <a href="/2023/non-neutrality/">writeup</a></span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto/semaphore">Semaphore</a></span><span class="anthology-meta">18 solves · 482 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto/non-neutrality">Non-neutrality</a></span><span class="anthology-meta">1 solve · 499 pts · <a href="/2023/non-neutrality/">writeup</a></span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto/onelinecrypto">onelinecrypto</a></span><span class="anthology-meta">14 solves · 486 pts · <a href="/2023/onelinecrypto/">writeup</a></span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto/shard">Shard</a></span><span class="anthology-meta">1 solve · 499 pts</span></div>
-<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/misc/1337-word-search">1337 Word Search</a></span><span class="anthology-meta"></span></div>
-<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/misc/1337er-word-search">1337er Word Search</a></span><span class="anthology-meta"></span></div>
-<div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/re/woodchecker">Woodchecker</a></span><span class="anthology-meta"></span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/crypto/shard">Shard</a></span><span class="anthology-meta">2 solves · 498 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/misc/1337-word-search">1337 Word Search</a></span><span class="anthology-meta">118 solves · 330 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/misc/1337er-word-search">1337er Word Search</a></span><span class="anthology-meta">7 solves · 493 pts</span></div>
+<div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title"><a href="https://github.com/Social-Engineering-Experts/SEETF-2023-Public/tree/main/challs/re/woodchecker">Woodchecker</a></span><span class="anthology-meta">21 solves · 479 pts</span></div>
 
 ### 2023 — vsCTF · Sep 2023
 
@@ -219,7 +222,9 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 <div class="anthology-note">↳ Later inspired <strong>MissingNo.1</strong>, <strong>MissingNo.2</strong> and <strong>MissingNo.3</strong> revenge challenges by soon-haari.</div>
 <div class="anthology-entry"><span class="anthology-kind">pwn</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/pwn/gisnep">Gisnep</a></span><span class="anthology-meta">Easy</span></div>
 <div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2025/tree/main/rev/rise-up-lights">Rise Up Lights</a></span><span class="anthology-meta">Medium</span></div>
+
 ### <a href="https://github.com/ctf-mt/maltactf-2025-quals">2025 — MaltaCTF Quals</a> · Jun 2025
+
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/ctf-mt/maltactf-2025-quals/tree/master/crypto/2log">2log</a></span><span class="anthology-meta">67 solves · with Warri</span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/ctf-mt/maltactf-2025-quals/tree/master/crypto/grammar-nazi">grammar nazi</a></span><span class="anthology-meta">25 solves</span></div>
 
@@ -233,7 +238,7 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 ### <a href="https://github.com/ctf-mt/maltactf-2025-finals">2025 — MaltaCTF Finals</a> · Sep 2025
 
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/ctf-mt/maltactf-2025-finals/tree/main/crypto/qed">Q.E.D.</a></span><span class="anthology-meta">3 solves</span></div>
-<div class="anthology-note">↳ Adib later wrote <strong>revenqed</strong> for ICC 2026 as a revenge/sequel.</div>
+<div class="anthology-note">↳ Followed by <strong>revenqed</strong> (ICC 2026).</div>
 
 ### <a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges">2025 — skateboarding dog CTF @ BSides Canberra</a> · Sep 2025
 
@@ -242,15 +247,16 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 <div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges/tree/main/rev/pensig">pensig</a></span><span class="anthology-meta">easy · 7 solves</span></div>
 <div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2025-challenges/tree/main/misc/cryptic-crossword">cryptic crossword</a></span><span class="anthology-meta">easy · 112 solves</span></div>
 
-### 2026 — OICC · Feb 2026
+### <a href="https://github.com/AustICCQuals/Challenges2026">2026 — OICC</a> · Feb 2026
 
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2026/oicc/sky-byte">Sky-Byte</a></span><span class="anthology-meta"></span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2026/oicc/baby-shark">Baby Shark</a></span><span class="anthology-meta"></span></div>
-<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2026/oicc/megablahaj">MegaBlåhaj</a></span><span class="anthology-meta"></span></div>
-<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2026/oicc/neobeo-fried-chicken">Neobeo Fried Chicken</a></span><span class="anthology-meta"></span></div>
-<div class="anthology-entry"><span class="anthology-kind">pwn</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2026/oicc/ent-rop-y">ent-rop-y</a></span><span class="anthology-meta"></span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2026/tree/main/crypto/sky-byte">Sky-Byte</a></span><span class="anthology-meta">Easy</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2026/tree/main/crypto/baby-shark">Baby Shark</a></span><span class="anthology-meta">Medium</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2026/tree/main/crypto/megablahaj">MegaBlåhaj</a></span><span class="anthology-meta">Hard</span></div>
+<div class="anthology-entry"><span class="anthology-kind">pwn</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2026/tree/main/pwn/ent-rop-y">ent-rop-y</a></span><span class="anthology-meta">Easy</span></div>
+<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/AustICCQuals/Challenges2026/tree/main/misc/neobeo-fried-chicken">Neobeo Fried Chicken</a></span><span class="anthology-meta">Easy</span></div>
+<div class="anthology-note">↳ Followed by <strong>Neobeo Re-fried Chicken</strong> (BSides Canberra 2026).</div>
 
-### <a href="https://icc.ecsc.eu/">2026 — ICC, Gold Coast</a> · May 2026
+### <a href="https://icc2026.au/">2026 — ICC, Gold Coast</a> · May 2026
 
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2026/icc/sbg-lcg">SBG-LCG</a></span><span class="anthology-meta"></span></div>
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/AdibSurani/challenge-archive/tree/main/2026/icc/revenqed">revenqed</a></span><span class="anthology-meta"></span></div>
@@ -262,6 +268,18 @@ I write CTF challenges as **Neobeo**, mostly in crypto, but occasionally rev, pw
 <div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/crypto/apbq-rsa-iv">apbq-rsa-iv</a></span><span class="anthology-meta">Master (5) · 11 solves · <a href="/2026/apbq-rsa-iv/">writeup</a></span></div>
 <div class="anthology-note">↳ Successor to <strong>apbq-rsa-iii</strong> (ImaginaryCTF 2025).</div>
 <div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/project-sekai-ctf/sekaictf-2026/tree/main/game/67-hunt">6-7 Puzzle Hunt</a></span><span class="anthology-meta">Normal (2) · 362 solves · <a href="/2026/happy-6-7-day/">reflection</a></span></div>
+
+### <a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges">2026 — skateboarding dog CTF @ BSides Canberra</a> · Sep 2026
+
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/crypto/6-7-oblivious-transfer">6/7 Oblivious Transfer</a></span><span class="anthology-meta">hard · 3 solves</span></div>
+<div class="anthology-entry"><span class="anthology-kind">rev</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/rev/x67">x67</a></span><span class="anthology-meta">medium · 14 solves</span></div>
+<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/misc/skbdg-cryptic-2026">Skateboarding Dog Cryptic 2026</a></span><span class="anthology-meta">easy · 64 solves</span></div>
+<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/misc/trailblazer">Trailblazer</a></span><span class="anthology-meta">easy · 16 solves · with chsh</span></div>
+<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/misc/neobeo-refried-chicken">Neobeo Re-fried Chicken</a></span><span class="anthology-meta">medium · 41 solves</span></div>
+<div class="anthology-note">↳ Sequel to <strong>Neobeo Fried Chicken</strong> (OICC 2026).</div>
+<div class="anthology-entry"><span class="anthology-kind">misc</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/misc/moore-6s-and-7s">Moore 6s and 7s</a></span><span class="anthology-meta">medium · 10 solves</span></div>
+<div class="anthology-entry"><span class="anthology-kind">crypto</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/gacha/rsa-1">RSA 1</a> · <a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/gacha/rsa-2">RSA 2</a> · <a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/gacha/rsa-3">RSA 3</a> · <a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/gacha/rsa-4">RSA 4</a> · <a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/gacha/rsa-5">RSA 5</a> · <a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/gacha/rsa-67">RSA 6/7</a></span><span class="anthology-meta">gacha · beginner</span></div>
+<div class="anthology-entry"><span class="anthology-kind">pwn</span><span class="anthology-title"><a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/gacha/rop-1">ROP 1</a> · <a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/gacha/rop-2">ROP 2</a> · <a href="https://github.com/skateboardingdog/bsides-cbr-2026-challenges/tree/main/gacha/rop-3">ROP 3</a></span><span class="anthology-meta">gacha · beginner</span></div>
 
 ### [ImaginaryCTF](https://imaginaryctf.org/)
 
@@ -283,7 +301,7 @@ I also write about challenges when there is something worth remembering about th
 
 <div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="/2023/non-neutrality/">2023 — Non-neutrality</a></span><span class="anthology-meta">SEETF author writeup</span></div>
 <div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="/2023/onelinecrypto/">2023 — onelinecrypto</a></span><span class="anthology-meta">SEETF author writeup</span></div>
-<div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="/2023/the-door-to-the-xord/">2023 — The Door to the Xord</a></span><span class="anthology-meta">LITCTF</span></div>
+<div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="/2023/door-to-the-xord/">2023 — The Door to the Xord</a></span><span class="anthology-meta">LITCTF</span></div>
 <div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="/2023/your-did-it/">2023 — Your Did It!</a></span><span class="anthology-meta">LITCTF</span></div>
 <div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="/2023/climbing-snowdon/">2023 — Climbing Snowdon</a></span><span class="anthology-meta">LITCTF</span></div>
 <div class="anthology-entry anthology-entry--simple"><span class="anthology-title"><a href="/2023/flaghash/">2023 — FlagHash</a></span><span class="anthology-meta">vsCTF author writeup</span></div>
@@ -336,7 +354,7 @@ Most of this work came from wanting to understand old games and formats just eno
 ### Nintendo / game-format tools
 
 - **[DX Degausser](https://gbatemp.net/download/dx-degausser.4613/)** — probably my earliest contribution to the Nintendo DS scene, this tool allows you to swap songs within a Daigasso! Band Brothers DX save file.
-- **[Degausser](https://github.com/AdibSurani/Degausser)** — like the above, but for Daigasso! Band Brothers P. Also comes with a version that runs entirely on the 3DS.
+- **[Degausser](https://github.com/AdibSurani/Degausser)** — like the above, but for Daigasso! Band Brothers P. Also comes with a version that runs entirely on the 3DS. Degausser 3.0 was released alongside the 2026 English translation.
 - **[Cetera](https://github.com/AdibSurani/Cetera)** — a library to encode and decode 3DS file formats like text, images and archives.
 - **[GUI-Investigator](https://github.com/AdibSurani/GUI-Investigator)** — a tool for investigating the complicated GUI format found in The Great Ace Attorney.
 - **[RHMPatch](https://github.com/rhmodding/RHMPatch)** — a redirection patch for Rhythm Heaven Megamix to make modding easier.
@@ -360,7 +378,7 @@ I tend to appear in translation projects where the text is hidden behind an inco
 - **[E.X. Troopers](https://fantranslators.info/projects/e-x-troopers/)** — 3DS video and texture reverse engineering, programming and patcher support.
 - **[Time Travelers](https://fantranslators.info/projects/time-travelers/)** — programming for the 2025 English main-story patch.
 - **[Dragon Quest Monsters: Joker 3](https://gbatemp.net/threads/translation-dragon-quest-monsters-joker-3.492313/)** — helped with reverse engineering.
-- **[Daigasso! Band Brothers P](https://gbatemp.net/threads/daigasso-band-brothers-p.368948/)** — an incomplete but working English translation that I would still like to revisit and release.
+- **[Daigasso! Band Brothers P](https://github.com/Neobeo/JamWithTheBandP-English)** — released in Nov 2026 as _Jam with the Band P_, a complete English translation over 10 years in the making. See the [release announcement](https://gbatemp.net/threads/wip-daigasso-band-brothers-p-fan-translation.430758/post-10947092) and my [reflection on 20 years of Daigasso](/2026/20-years-of-daigasso/).
 
 ## Papers
 
@@ -383,7 +401,7 @@ I tend to appear in translation projects where the text is hidden behind an inco
 - **[Sets on a Plane](https://adib.fourplusfive.com/seminars/seminar_40accmcc/)** — University of Newcastle · 12 Dec 2016.
 - **[The Bisection Width of the Levi Graph of PG(2,q)](https://adib.fourplusfive.com/seminars/bisection_width_2017.pdf)** — Monash University · 5 Dec 2017.
 - **[The Isoperimetric Problem in Block Designs](https://adib.fourplusfive.com/seminars/completion_seminar/)** — PhD completion seminar, University of Melbourne · 22 Mar 2018.
-- **[How we hacked and translated The Great Ace Attorney](https://federation.edu.au/icsl/past-mre-conferences/bsides-ballarat)** — BSides Ballarat 2025.
+- **[How we hacked and translated The Great Ace Attorney](https://federation.edu.au/icsl/past-mre-conferences/bsides-ballarat)** — BSides Ballarat · 4 May 2025.
 
 ### Coaching / internal
 
@@ -408,6 +426,6 @@ I tend to appear in translation projects where the text is hidden behind an inco
 - **[Letters and Numbers S1E17](https://www.youtube.com/watch?v=OnBRelDcm-I)** — Aug 2010.
 - **[56-postcard photomosaic](https://adib.fourplusfive.com/static/photomosaic.jpg)** — a large crowdsourced project in 2012 where I got people from all around the world to send 56 postcards; combined the right way, they form a photo taken from my wife's birthday in 2011.
 
-*Last updated: 25 August 2026*
+*Last updated: 14 November 2026*
 
 </div>
